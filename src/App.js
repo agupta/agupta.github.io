@@ -1,23 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+const linkedInUrl = "https://www.linkedin.com/in/anishgupta2/";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hi, I'm Anish Gupta. I'm an undergraduate mathematics student at the University of Warwick.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>
+          This website is a work in progress (probably for a while).
+        </p>
+        <p>
+          In the meantime, you can <a 
+            className="App-link"
+            href={linkedInUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            check out my LinkedIn
+          </a>.
+        </p>
       </header>
     </div>
   );
