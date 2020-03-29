@@ -11,7 +11,8 @@ ReactGA.initialize(gaTrackingId);
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 // App
-const linkedInUrl = "https://www.linkedin.com/in/anishgupta2/";
+const linkedInUrl = 'https://www.linkedin.com/in/anishgupta2/';
+const gitHubUrl = 'https://github.com/agupta';
 
 function App() {
   return (
@@ -24,14 +25,23 @@ function App() {
           This website is a work in progress (probably for a while).
         </p>
         <p>
-          In the meantime, you can <a 
+          In the meantime, you can check out my <ReactGA.OutboundLink
             className="App-link"
-            href={linkedInUrl}
+            eventLabel="LinkedIn-Clicked"
+            to={linkedInUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
-            check out my LinkedIn
-          </a>.
+            LinkedIn
+          </ReactGA.OutboundLink> and <ReactGA.OutboundLink
+            className="App-link"
+            eventLabel="GitHub-Clicked"
+            to={gitHubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </ReactGA.OutboundLink>.
         </p>
       </header>
     </div>
