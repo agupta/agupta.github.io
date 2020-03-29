@@ -1,6 +1,16 @@
 import React from 'react';
 import './App.css';
 
+import ReactGA from 'react-ga';
+
+
+// Google Analytics
+const gaTrackingId = 'UA-162153275-1';
+
+ReactGA.initialize(gaTrackingId);
+ReactGA.pageview(window.location.pathname + window.location.search);
+
+// App
 const linkedInUrl = "https://www.linkedin.com/in/anishgupta2/";
 
 function App() {
